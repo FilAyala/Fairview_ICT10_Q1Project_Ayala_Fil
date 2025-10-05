@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Contact us!</title>
+</head>
+
+<body>
+
+
+    <style>
+    body{
+    margin: 10px;
+    background-color: lightblue;
+    font-family: 'Gill Sans Mt';
+    }
+
+
+    .navbar a {
+    color: blue;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 25px;
+    margin-left: 5px;
+    }
+
+    .inputinfo_background{
+    margin: 100px;
+    padding:20px;
+    background-color: brown;
+    color:black;
+    text-align: center;   
+    border: 10px;
+    border-width: thick; 
+    border-style: solid; 
+    border-color: lightblue;    
+    }
+
+    .insideinputinfo_background{
+    background-color: lightblue;
+    padding: 10px;
+    }
+
+    #DETAILS{
+    white-space: pre-line;
+    }
+
+    </style>
+
+
+    <py-config>
+    [[fetch]] 
+    files = ["ordering.py"]
+    </py-config>
+    <script type="py" src="receivecontact.py"></script>
+
+
+    <div class="inputinfo_background">
+        <div class="insideinputinfo_background">
+            <h1>Contacting Details:</h1>
+    <br>
+    <h2>Name:</h2>
+        <br>
+        <input type="text"  style="width:300px;" id="input_name" placeholder="Enter your name!"/>
+
+    <br><br>
+
+    <h2>Address:</h2>
+        <br>
+        <input type="text"  style="width:300px;" id="input_address" placeholder="Enter your address!"/>
+
+     <h2>Contact number:</h2>
+        <br>
+        <input type="number"  style="width:300px;" id="input_contact" placeholder="Enter your contact number!"/>  
+
+        <br><br>
+
+        <label for="emailselect" id="which_email" style="font-size: 35px;">Which email of The Standard are you sending this to?</label>
+		<br><br>
+		     <select id="emailselect" name="emailselect">
+			    <option value="info@Standard.com">info@Standard.com</option>
+			    <option value="support@Standard.com">support@Standard.com</option>
+			    <option value="careers@Standard.com">careers@Standard.com</option>
+		    </select>
+		
+        <br><br>
+
+        <label for="enterusermessage" style="font-size: 35px;">What is your message to The Standard?</label>
+        <br>
+        <textarea id="enterusermessage" rows="4" cols="30" placeholder="Type answer here"></textarea>
+
+		<br><br>
+
+        <button class="btn btn-primary" type="button" py-click="generate_messagesent" style="color: black;">Press to generate message!</button>
+        
+            <br><br>
+
+   
+
+        <h2 id="usermessage"style="background-color: white; color: black; white-space: pre-line; font-size: 15px;">Message received here!</h2>
+        </div>
+        </div>
+    </div>
+
+
+<nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <h1 style="font-size: 35px; font-family: Times New Roman;">The Standard</h1>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="orderingform.html">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact</a>
+                </li>
+            </div>
+    </div>
+</nav>   
+
+</body>
